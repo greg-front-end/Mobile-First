@@ -15,10 +15,19 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
-        <div class="logo">
+        <div class="logo" id="logo">
           <a href="#" class="logo__link">
             <img src="images/Group 2 1.svg" alt="logo">
           </a>
+        </div>
+        <div class="header__overlay">
+          <ul class="header__navbar">
+            <li class="header__navbar-item" onclick="slowScroll('#headerone')"><a href="#headerone">Главная</a></li>
+            <li class="header__navbar-item" onclick="slowScroll('#service')"><a href="#service">Сервис</a></li>
+            <li class="header__navbar-item" onclick="slowScroll('#ourworks')"><a href="#ourworks">Наши Проекты</a></li>
+            <li class="header__navbar-item" onclick="slowScroll('#team')"><a href="#team">Команда</a></li>
+            <li class="header__navbar-item" onclick="slowScroll('#contact')"><a href="#contact">Контакты</a></li>
+        </ul>
         </div>
         <nav class="menu">
           <button class="menu__btn">
@@ -32,7 +41,7 @@
   </header>
 
   <!-- start head section -->
-  <section class="head">
+  <section class="head" id="headerone">
     <div class="top-slider">
       <div class="top-slider__item">
         <h3 class="top-slider__title">
@@ -98,7 +107,7 @@
 
 
   <!-- start services section -->
-  <section class="serv">
+  <section class="serv" id="service">
     <div class="container serv__container">
       <div class="serv__inner">
         <div class="serv__head">
@@ -244,7 +253,7 @@
   <!-- end services section -->
 
   <!-- start section project -->
-  <section class="project">
+  <section class="project" id="ourworks">
     <div class="container">
       <h4 class="project__title title">
         Наши Проекты
@@ -309,7 +318,7 @@
 
 
   <!-- start section team -->
-  <section class="team">
+  <section class="team" id="team">
     <div class="container">
       <div class="team__inner">
         <img class="team__images" src="images/team.jpg" alt="">
@@ -435,7 +444,7 @@
   <!-- end section reviews -->
 
   <!-- start section footer -->
-  <footer class="footer">
+  <footer class="footer" id="contact">
       <div class="container">
         <div class="footer__items">
           <div class="footer__logo">
@@ -478,14 +487,14 @@
           </div>
         </div>
       </div>
-          <a href="#" class="footer__up-btn">
+          <a href="#headerone" class="footer__up-btn" onclick="slowScroll('#headerone')">
             ВВЕРХ
             <img src="images/up-btn.svg" alt="" class="footer__up-img">
           </a>
   </footer>
   <!-- end section footer -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
   <script src="libs/slick/slick.min.js"></script>
 </body>

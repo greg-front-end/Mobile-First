@@ -29,6 +29,41 @@ $(function () {
     prevArrow: false,
     slidesToShow: 1,
     slidesToScroll: 1,
+  }); 
+
+  $('.menu__btn').on('click', function() {
+    $('.header__overlay').slideToggle(300, function(){
+          if( $(this).css('display') === "none"){
+            $(this).removeAttr('style');
+        }
+     });
   });
+  $(".header__navbar-item").click(function(event) {
+    $(".header__overlay").removeAttr('style');
+
+  });
+
+
+  //const menuBtn = document.querySelector('.menu__btn');
+  //const menuOverlay = document.querySelector('.header__overlay');
+  //menuBtn.addEventListener('click', togglePlay => {
+  //  if(menuOverlay.style.display === 'none') {
+  //    console.log("menu open");
+  //    menuOverlay.classList.add('active');
+  //    menuOverlay.classList.remove('header__overlay');
+  //  } else {
+  //    menuOverlay.classList.add('header__overlay');
+  //    menuOverlay.classList.remove('active');
+  //    console.log("menu close");
+  //  }
+  //});
+
 });
 
+function slowScroll(id) {
+  var offset = 0;
+  $('html, body').animate({
+    scrollTop: $(id).offset().top - offset
+  }, 1500);
+  return false;
+};
